@@ -1,0 +1,19 @@
+sign_in_out.main_menu_links:
+  title: 'Sign In'
+  description:  'For signing in form'
+  weight: 1
+  route_name: sign_in_out.sign_in_menu
+  menu_name: main
+  options:
+    attributes:
+      target: _blank
+
+sign_in_out.main_menu_link:
+  title: 'Sign UP'
+  description:  'For signing up form'
+  weight: 2
+  route_name: sign_in_out.sign_up_menu
+  menu_name: main
+  options:
+    attributes:
+      target: _blank

@@ -1,0 +1,29 @@
+uuid: 72fee68d-bff1-4e46-b4b8-abd74e1bfa6e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.study_materials.body
+    - node.type.study_materials
+  module:
+    - text
+    - user
+id: node.study_materials.default
+targetEntityType: node
+bundle: study_materials
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
