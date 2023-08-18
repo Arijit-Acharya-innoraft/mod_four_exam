@@ -1,13 +1,10 @@
 uuid: 2f73400e-a4bf-4ae6-9eb6-6d3fea30512c
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
     - node.type.article
-    - node.type.assignments
     - node.type.page
-    - node.type.study_materials
-    - node.type.videos
     - taxonomy.vocabulary.tags
   module:
     - comment
@@ -22,7 +19,7 @@ dependencies:
 _core:
   default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
 id: content_editor
-label: 'Academic Head'
+label: 'Content editor'
 weight: 2
 is_admin: false
 permissions:
@@ -34,28 +31,17 @@ permissions:
   - 'access tour'
   - 'administer url aliases'
   - 'create article content'
-  - 'create assignments content'
   - 'create page content'
-  - 'create study_materials content'
   - 'create terms in tags'
   - 'create url aliases'
-  - 'create videos content'
-  - 'delete any assignments content'
-  - 'delete any study_materials content'
-  - 'delete any videos content'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own files'
   - 'delete own page content'
-  - 'delete own study_materials content'
   - 'delete page revisions'
-  - 'edit any study_materials content'
-  - 'edit any videos content'
   - 'edit own article content'
-  - 'edit own assignments content'
   - 'edit own comments'
   - 'edit own page content'
-  - 'edit own videos content'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'

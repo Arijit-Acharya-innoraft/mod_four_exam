@@ -1,5 +1,0 @@
-name: Delete Data
-description: 'Deletes data after timeperiod'
-type: module
-core_version_requirement: ^10
-package: Custom Package

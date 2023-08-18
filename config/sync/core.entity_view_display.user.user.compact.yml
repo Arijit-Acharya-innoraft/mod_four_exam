@@ -1,10 +1,9 @@
 uuid: b28e6567-6ecb-48d5-be96-e4121b004f10
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.field_passing_year
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -21,14 +20,13 @@ content:
     type: image
     label: hidden
     settings:
-      image_link: content
       image_style: thumbnail
+      image_link: content
       image_loading:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
-  field_passing_year: true
   langcode: true
   member_for: true
