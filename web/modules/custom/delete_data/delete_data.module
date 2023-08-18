@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Implements hook_cron to delete previous notices and graduate account.
+ */
+
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_cron().
+ */
+function delete_data_cron() {
+  $database = \Drupal::database();
+  // Fetching the nodes.
+  $query = $database->select('node', 'n')
+    ->fields('n', ['nid'])
+    ->condition('type', 'notice')
+    ->execute();
+  $results = $query->fetchAll();
+  // Storing the nids of the node.
+  $nid_store = [];
+  foreach ($results as $result) {
+    array_push($nid_store, $result->nid);
+  }
+  // Fetching the created time of the nids.
+  $query = $database->select('node_field_data', 'nfd')
+    ->fields('nfd', ['created'])
+    ->condition('nfd.nid', $nid_store, 'IN')
+    ->execute();
+  $result = $query->fetchAll();
+  // Storing the nids.
+  $node_creation_time = [];
+  foreach ($result as $r) {
+    array_push($node_creation_time, $r->created);
+  }
+  // Storing the current time.
+  $current_time = time();
+  $one_day = 86400;
+  // Checking the difference between node creation and cuerrent time.
+  for ($i = 0; $i < count($node_creation_time); $i++) {
+    if ($current_time - $node_creation_time[$i] >= $one_day) {
+      // Deleting the node if it is more than of 24 hrs.
+      \Drupal::entityTypeManager()->getStorage('node')->load($nid_store[$i])->delete();
+    }
+
+  }
+
+  // Checking the graduation passing of the students.
+  $stud_uid = [];
+  $query = $database->select('user__field_passing_year', 'ufpy')
+    ->fields('ufpy', [' entity_id', ' field_passing_year_value'])
+    ->execute();
+  $result = $query->fetchAll();
+
+  foreach ($result as $r) {
+
+    $date = $r->field_passing_year_value;
+    $date_s = strtotime($date);
+    if ($current_time - $date_s >= (180 * $one_day)) {
+      $uid = $r->entity_id;
+      array_push($stud_uid, $uid);
+    }
+  }
+
+  foreach ($stud_uid as $s_uid) {
+    $user = User::load($s_uid);
+    if ($user) {
+      $user->delete();
+    }
+  }
+
+}

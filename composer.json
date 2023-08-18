@@ -22,6 +22,7 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/devel": "^5.0",
+        "drupal/jsonapi_extras": "^3.23",
         "drupal/smtp": "^1.2",
         "drush/drush": "^11.5"
     },

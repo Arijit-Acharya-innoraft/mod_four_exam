@@ -1,0 +1,13 @@
+view api_module:
+  title: 'View my module.'
+  description: 'View the my module modules content.'
+custom page api_module:
+  title: 'View custom Page'
+  description: 'Allow to view custom page.'
+access api_module:
+  title: 'Access mymodule' 
+  description: 'Access mymodules features.'
+administer api_module:
+  title: 'Access myomdules settings.'
+  description: 'Access the admin mymodules setting page.'
+  restrict access: true
