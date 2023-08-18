@@ -1,0 +1,18 @@
+uuid: 587c06e4-b2c9-40c1-a763-2fe10db742be
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Study materials'
+type: study_materials
+description: 'Study Materials of students.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,5 @@
+name: Content Type
+description: 'Creating content types'
+type: module
+core_version_requirement: ^10
+package: Custom_package

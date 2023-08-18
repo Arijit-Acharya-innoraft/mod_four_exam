@@ -1,0 +1,7 @@
+api_module.routing:
+  path: '/api/roles-data'
+  defaults:
+    _controller: '\Drupal\custom_api_roles\Controller\ApiRolesController::getData'
+    _title: 'Display Json'
+  requirements:
+    _permission: 'access content' 

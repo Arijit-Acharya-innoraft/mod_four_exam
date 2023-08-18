@@ -1,0 +1,20 @@
+uuid: 622b31b3-7849-4fdc-b37f-9fc6208f2c0b
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: '-A6h9hdYysn00KrRdBZkeiOyI7kr8Hnwn-8xi4kg5xo'
+name: Assignments
+type: assignments
+description: 'Assignments of students.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

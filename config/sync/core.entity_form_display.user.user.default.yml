@@ -1,11 +1,13 @@
 uuid: cf6d41f9-d88d-4878-902d-6602627d5e23
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_passing_year
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - datetime
     - image
     - user
 _core:
@@ -21,6 +23,12 @@ content:
   contact:
     weight: 5
     region: content
+  field_passing_year:
+    type: datetime_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   language:
     weight: 0
     region: content

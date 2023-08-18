@@ -1,0 +1,17 @@
+sign_in_out.sign_in_menu:
+  path: '/sign_in_out/sign_in_page'
+  defaults:
+    _form: 'Drupal\sign_in_out\Form\SignIn'
+    _title: 'Sign In Form'
+  requirements: 
+    _permission: 'access content'
+
+
+sign_in_out.sign_up_menu:
+  path: '/sign_in_out/sign_up_page'
+  defaults:
+    _form: 'Drupal\sign_in_out\Form\SignUp'
+    _title: 'Sign Up Form'
+  requirements: 
+    _permission: 'access content'
+    # _role: students

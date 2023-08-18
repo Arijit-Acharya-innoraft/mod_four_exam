@@ -1,0 +1,18 @@
+uuid: 7b2dc23e-159b-4f50-a465-3eaae736a1c9
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Notice
+type: notice
+description: 'Notice for students'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
