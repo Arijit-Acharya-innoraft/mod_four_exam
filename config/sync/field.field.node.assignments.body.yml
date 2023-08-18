@@ -1,0 +1,26 @@
+uuid: 7faaae9d-6dab-4c9a-8218-729cf21913d9
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.assignments
+  module:
+    - text
+_core:
+  default_config_hash: EhpBNhho-9iMEHaA-QhvUNHAXeMjGnWIUSl6yIfN4aE
+id: node.assignments.body
+field_name: body
+entity_type: node
+bundle: assignments
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

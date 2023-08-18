@@ -1,0 +1,32 @@
+uuid: d10adeb7-173b-46ee-b4e8-2e24b0257cf2
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.videos.field_video_file
+    - node.type.videos
+  module:
+    - file
+    - user
+_core:
+  default_config_hash: d1o5e6d4pfUXQGqZZyF--PZ6nNpQjGz_QnXbMdo3IGg
+id: node.videos.default
+targetEntityType: node
+bundle: videos
+mode: default
+content:
+  field_video_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
